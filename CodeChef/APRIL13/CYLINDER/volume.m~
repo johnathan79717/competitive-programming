@@ -1,0 +1,20 @@
+function volume(W, H, x)
+    if x < H / 2
+        L = x;
+    elseif x > 2 * H
+        L = H;
+    else
+        L = x + H - sqrt(2 * H * x);
+    end
+    
+    if H < pi * L
+        if W - x < pi * L
+            A = 0;
+        else
+            A = H;
+        end
+    else
+        if W - x < pi * L
+            A = W - x;
+        elseif W - x > H
+end

@@ -1,0 +1,60 @@
+<html>
+<head><title>A. Tropes</title></head>
+<body>
+<div align="justify">
+
+<h2>A. Tropes</h2>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+Every film is built from sequences of "tropes" or "cliches". Often there are usual subsequences, where these tropes follow each other in a particular order
+(although sometimes unrelated tropes are inserted between members).
+Given some film scripts (simply given as a series of trope code numbers), determine how long is the longest common subsequence that occurs in every script
+(allowing for some unrelated tropes in the chain).
+
+<td> &nbsp;&nbsp; <td align="right">
+<img width=300 alt="$$$alt" src="tropes.png">
+</table>
+<p>
+
+<h3>Input</h3>
+
+First line is the number of test cases in the current file.
+<p>
+Each test case is described thus:
+<ul>
+	<li>Number of series in this test case
+	<li>For each series, the length
+	<li>Then all member numbers of the series
+</ul>
+
+(There is no connection between the test cases.)
+
+<h3>Output</h3>
+
+Output should contain an integer for each testcase seperated by a linebreak. Each integer should be the exact solution for each case: the length of the longest common subsequence.
+
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td valign=top><h3>Example input</h3>
+<pre>
+1
+2
+3
+10 11 12
+2
+10 12
+</pre>
+
+<td valign=top><h3>Example output</h3>
+<pre>
+2
+</pre>
+
+The longest common subsequence is "10 12", so the solution is 2.
+
+</table>
+
+</div>
+</body>
+</html>

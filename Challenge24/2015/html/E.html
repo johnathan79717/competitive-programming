@@ -1,0 +1,103 @@
+<html>
+<head><title>E. Frets</title></head>
+<body>
+<div align="justify">
+
+<h2>E. Frets</h2>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+Films have music, and the soundtrack from our favourite film uses only guitars. We'd like to play the sheet music for this film.
+
+<p>
+Determine the optimal order of hand movements to play this sheet music on a guitar, using the least amount of energy possible.
+
+<td> &nbsp;&nbsp; <td align="right">
+<img width=300 alt="Frets" src="guitar.jpg">
+</table>
+
+<p>
+In the western 12 tone system, the following notes (12 "semitones") exist in a single octave:
+
+<pre>
+&lt;&lt;-  C C# D D# E F F# G G# A A# B   -&gt;&gt;
+                equivalent to:
+&lt;&lt;-  C Db D Eb E F Gb G Ab A Bb B   -&gt;&gt;
+</pre>
+
+Meaning that, in the sheet music system, <tt>C#</tt> (C sharp) is the same semitone as <tt>Db</tt> (D flat). The 12 tones then repeat for higher notes (octaves). The first (lowest) set is C1, C#1, D1 etc; then an octave higher, C2, C#2, D2 and so on. We numbered these notes, calling C1 -&gt; 0, C2 -&gt; 12, Db2 == C#2 -&gt; 13, E2 -&gt; 16, etc.
+
+<img width=300 alt="Frets" src="skala.png">
+
+<p>
+Guitars have six strings. Each string has a base note ("keynote"). It plays this note if you pick it without holding down a fret. Frets are the regularly placed ribs along the guitar's neck. Holding down each fret shifts the played note by a semitone.
+Frets are numbered from the tuning nut upward (the end of the neck, opposite from the guitar's body), starting from fret 1. "0" means no fret is held down.
+
+<p>
+You can hold down up to 4 strings simultaneously (using 4 fingers). From the base position of the hand, fingers may be shifted by up to 2 frets (offset: 0..2).
+
+<p>
+Initially, the hand is positioned over fret 1. It costs 5 units of energy to move the hand by one fret distance.
+
+<p>
+Additionally, for each played chord, holding down fingers cost energy:
+
+<ul>
+	<li>1 unit of energy to hold a string to the fret under the hand (offset 0)
+	<li>2 units of energy to hold a string to the fret next to the hand (offset 1)
+	<li>3 units of energy to hold a string to the fret one over (offset 2)
+	<li>it doesn't cost energy to just pluck the strings (it's done by a different hand!)
+</ul>
+
+<p>
+The standard tuning of the guitar is: E2 A2 D3 G3 B3 E4, from the lowest sounding string to the highest.
+(The strings are tuned a 5 semitones apart, with the exception of the G and B-strings.) You can adjust the tuning of the guitar to achieve optimal play.
+
+<h3>Input</h3>
+
+Sheet music in PNG files.
+
+<h3>Output</h3>
+
+On the first line of the output file, the guitar tuning. For example:
+<pre>
+16 21 26 31 35 40
+</pre>
+
+This stands for the default E2 A2 D3 G3 B3 E4.
+
+<p>
+One line for each chord should follow, with 7 numbers. The first number is the hand position, the following six numbers are for the six strings. For example:
+
+<pre>
+1 -1 0 -1 1 -1 -1
+</pre>
+
+The hand position is given as a fret index, starting with 1. For each string, the possible values are:
+<ul>
+	<li>-1: the string is not plucked
+	<li>0: the string is plucked, but not held to a fret
+	<li>1: the string is plucked, with a finger holding it to the fret under the hand (offset 0)
+	<li>2: the string is plucked, with a finger holding it to the fret next to the hand (offset 1)
+	<li>3: the string is plucked, with a finger holding it to the fret one over (offset 2)
+</ul>
+
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td valign=top><h3>Example input</h3>
+<pre>
+0.png
+</pre>
+
+<td valign=top><h3>Example output</h3>
+<pre>
+16 21 26 31 35 40
+1 -1 3 -1 -1 -1 -1
+2 -1 -1 -1 0 3 -1
+
+</pre>
+</table>
+
+</div>
+</body>
+</html>

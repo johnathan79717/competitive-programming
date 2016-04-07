@@ -1,0 +1,34 @@
+5
+2
+a char
+b int
+2
+int 0
+char 1 1
+int(b*a)
+2
+a char
+b int
+2
+int 0
+char 1 1
+char(a*b)
+2
+a char
+b int
+2
+int 1 2
+char 1 1
+char(a*b)
+2
+a char
+b int
+2
+int 1 2
+char 1 1
+char*char(a*b)*((
+1
+a char
+1
+char 0
+char

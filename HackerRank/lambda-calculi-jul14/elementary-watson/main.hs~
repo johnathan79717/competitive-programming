@@ -1,0 +1,47 @@
+import Data.Maybe
+import Control.Monad
+
+data Simple = Name String | Var String | Rel String [Simple]
+  deriving Show
+data Complex = Simple Simple | Condition Condition
+  deriving Show
+data Rule = Rule [Complex] Simple
+  deriving Show
+
+
+
+rules = [ Rule [] $ Rel "r" [Name "a"]
+        , Rule [Simple $ Rel "r" [Var "z"]] $ Rel "p" [Rel "r" [Var "z"], Var "z"]]
+
+q1 = Simple $ Rel "p" [Rel "r" [Name "a"], Name "a"]
+
+data Condition = Eq Simple Simple | Neq Simple Simple deriving Show
+
+match :: Simple -> Simple -> Maybe [Condition]
+match (Name s1) (Name s2) | s1 == s2 = Just [] | otherwise = Nothing
+match (Name _) (Rel _ _) = Nothing
+match (Rel _ _) (Name _) = Nothing
+match (Rel s1 simple1) (Rel s2 simple2)
+  | s1 /= s2 = Nothing
+  | otherwise = process simple1 simple2 where
+    process [] [] = Just []
+    process [] _ = Nothing
+    process _ [] = Nothing
+    process (x:xs) (y:ys) = do
+      m <- match x y
+      ms <- process xs ys
+      return (m ++ ms)
+match x y = Just [Eq x y]
+
+verify :: [Complex] -> Maybe [Condition]
+verify query = helper query where
+  helper [] = Just []
+  helper (q:qs) = case q of
+    Condition cond -> do
+      conds <- helper qs
+      return $ cond : conds
+    Simple simple -> liftM concat $ mapM try rules where
+      try (Rule premises conclusion) = do
+        cond <- match conclusion simple
+        conds <- helper (premises ++ qs)
+        return $ cond ++ conds

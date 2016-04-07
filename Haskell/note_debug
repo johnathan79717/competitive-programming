@@ -1,0 +1,24 @@
+ulimit -S -v 1048576
+
+QuickCheck
+
+Debug.Trace
+
+trace
+traceShow
+traceStack -- -prof -fprof-auto
+
+traceSelf :: Show a => a -> a
+traceSelf a = traceShow a a
+
+f a = trace "f<" $ traceShow a $
+
+to see exception
++RTS -xc
+
+partial signature
+
+qsortSig :: Ord a => [a] -> [a]
+qsortSig = undefined
+
+qsort xs | False = qsortSig xs

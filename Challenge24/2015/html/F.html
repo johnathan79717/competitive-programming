@@ -1,0 +1,93 @@
+<html>
+<head><title>F. Fast and Furious</title></head>
+<body>
+<div align="justify">
+
+<h2>F. Fast and Furious</h2>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+The movie was very long and we feel like getting home as soon as possible. Therefore we decide to avoid using the brakes unless absolutely necessary.
+
+<td> &nbsp;&nbsp; <td align="right">
+<img width=300 alt="Fast and Furious" src="race.jpg">
+</table>
+<p>
+
+There is an infinite grid of hexagonal fields. There is a set of grid fields that are
+designated "walls", and another set that are designated "goals"; the rest are empty. The objective is to drive our vehicle from the start field to any "goal" field, while avoiding the "wall" fields, in the shortest amount of time (least number of steps) possible. Additionally, the vehicle must stop (finish at speed 0) when reaching the goal.
+
+<p>
+Our vehicle has:
+<ul>
+	<li>A current field - initially the field 0, 0
+	<li>A current direction - one of <tt>N, NE, SE, S, SW, NW</tt>; initial value chosen in solution
+	<li>Speed - integer, &gt;=0, initially 0
+</ul>
+
+In each step, the vehicle executes one of the following commands:
+
+<ul>
+	<li><tt>F</tt> : go faster; increase speed by 1
+	<li><tt>S</tt> : go slower; decrease speed by 1
+	<li><tt>L</tt> : turn left, not allowed if speed is 0; [N, NE, SE, S, SW, NW] -&gt; [NW, N, NE, SE, S, SW]
+	<li><tt>R</tt> : turn right, not allowed if speed is 0; [N, NE, SE, S, SW, NW] -&gt; [NE, SE, S, SW, NW, N]
+</ul>
+
+After executing the command, the vehicle proceeds in the current direction, going as many fields as the current speed. The vehicle is not allowed to enter a "wall" field at any point while doing this (it's not a jumping car).
+
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td valign=top width=33%>
+			Example map layout:
+			<br><img width=300 alt="Map" src="map.png">
+		</td>
+		<td valign=top width=33%>
+			Coordinate system:
+			<br><img width=300 alt="Hexa layout" src="hexabase.png">
+		</td>
+		<td valign=top width=33%>
+			Directions:
+			<br><img width=300 alt="Directions" src="hexa1.png">
+		</td>
+	</tr>
+</table>
+
+<h3>Input</h3>
+
+<ul>
+	<li>Line 1: number of wall straights
+	<li>For each wall straight, a line with four numbers: <tt>x1 y1 x2 y2</tt>. All fields connecting the two specified fields in a straight line (including endpoints) are walls.
+	<li>One goal straight, a line with four numbers: <tt>x1 y1 x2 y2</tt>. All fields connecting the two specified fields in a straight line (including endpoints) are goal fields. The vehicle may finish on any of these goal fields.
+</ul>
+
+<h3>Output</h3>
+
+<ul>
+	<li>Line 1: initial direction
+	<li>Line 2: number of time units in solution
+	<li>Line 3: the solution; sequence of vehicle commands separated by spaces
+</ul>
+
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td valign=top><h3>Example input</h3>
+<pre>
+3
+1 0 2 2
+2 2 -1 2
+-1 2 -2 0
+0 3 -1 5
+</pre>
+
+<td valign=top><h3>Example output</h3>
+<pre>
+SW
+8
+F L F L L L S S
+</pre>
+</table>
+
+</div>
+</body>
+</html>
