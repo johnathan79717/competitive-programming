@@ -1,5 +1,5 @@
 #define DRL(x) LL x; RL(x)
-#ifndef LOCAL
+#ifdef ONLINE_JUDGE
     #define PL(x) printf("%I64d\n",x)
     #define RL(x) scanf("%I64d\n",&x)
 #else

@@ -54,6 +54,7 @@ typedef long long LL;
 const int INF = 1000000000;
 
 void print(int i) { printf("%d", i); }
+void print(LL i);
 template<class T> void PI(T i) { print(i); puts(""); }
 template<class T> void PIS(T i) { print(i); printf(" "); }
 

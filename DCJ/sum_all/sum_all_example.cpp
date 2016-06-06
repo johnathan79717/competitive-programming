@@ -16,15 +16,25 @@ int main() {
   for (long long pos = MyNodeId(); pos < GetN(); pos += NumberOfNodes()) {
     sum += GetNumber(pos);
   }
-  if (MyNodeId() > 0) {
-    Receive(MyNodeId() - 1);
-    sum += GetLL(MyNodeId() - 1);
-  }
-  if (MyNodeId() < NumberOfNodes() - 1) {
-    PutLL(MyNodeId() + 1, sum);
-    Send(MyNodeId() + 1);
+  if (MyNodeId() == 0) {
+      for (long long i = 1; i < NumberOfNodes(); i++) {
+          Receive(i);
+          sum += GetLL(i);
+      }
+      printf("%lld\n", sum);
   } else {
-    printf("%lld\n", sum);
+      PutLL(0, sum);
+      Send(0);
   }
+  //if (MyNodeId() > 0) {
+    //Receive(MyNodeId() - 1);
+    //sum += GetLL(MyNodeId() - 1);
+  //}
+  //if (MyNodeId() < NumberOfNodes() - 1) {
+    //PutLL(MyNodeId() + 1, sum);
+    //Send(MyNodeId() + 1);
+  //} else {
+    //printf("%lld\n", sum);
+  //}
   return 0;
 }
