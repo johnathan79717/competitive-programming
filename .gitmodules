@@ -1,0 +1,3 @@
+[submodule "Codeforces/codeforces-parser"]
+	path = Codeforces/codeforces-parser
+	url = git@github.com:johnathan79717/codeforces-parser.git
