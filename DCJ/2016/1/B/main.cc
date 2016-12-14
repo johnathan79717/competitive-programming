@@ -81,70 +81,57 @@ int popcount(long long x) { return __builtin_popcountll(x); }
 #define RL(x) scanf("%lld", &(x))
 #define PL(x) printf("%lld\n", x)
 #define DRL(x) LL x; RL(x)
-#include "rps.h"
 #include <message.h>
+#include "rps.h"
 
 #define LOG(x, ...) fprintf(stderr, x, ##__VA_ARGS__)
 //#define LOG(x...)
 
+pair<char,LL> p[5000000];
+int L;
+
+pair<char,LL> compete() {
+    while (L > 1) {
+        assert(L % 2 == 0);
+        REP(i, L / 2) {
+            if ((p[2*i].X == 'S' && p[2*i+1].X == 'R')
+            ||  (p[2*i].X == 'R' && p[2*i+1].X == 'P')
+            ||  (p[2*i].X == 'P' && p[2*i+1].X == 'S')) {
+                p[i] = p[2*i+1];
+            } else
+                p[i] = p[2*i];
+        }
+        L /= 2;
+    }
+    return p[0];
+}
 int main() {
     int M = NumberOfNodes(), id = MyNodeId();
     LL N = 1ll << GetN();
     int m = 1;
-    while (m*2 <= M && m * 2 <= N) {
+    while (m*2 <= M && m*2 <= N) {
         m *= 2;
     }
     M = m;
-    assert(M <= NumberOfNodes());
-    if (id >= M) return 0;
-    vector<pair<char,LL>> p;
-    p.reserve(N/M);
-    assert(N % M == 0);
-    for (LL i = N/M*id; i < N/M*(id+1); i++) {
-        p.EB(GetFavoriteMove(i), i);
-    }
-    auto compete = [](vector<pair<char,LL>> &p) {
-        while (p.size() > 1) {
-            assert(p.size() % 2 == 0);
-            vector<pair<char,LL>> tmp;
-            tmp.reserve(p.size() / 2);
-            REP(i, SZ(p) / 2) {
-                if (p[2*i].X == 'S') {
-                    if (p[2*i+1].X == 'R') {
-                        tmp.PB(p[2*i+1]);
-                    } else {
-                        tmp.PB(p[2*i]);
-                    }
-                } else if (p[2*i].X == 'R') {
-                    if (p[2*i+1].X == 'P') {
-                        tmp.PB(p[2*i+1]);
-                    } else {
-                        tmp.PB(p[2*i]);
-                    }
-                } else {
-                    assert(p[2*i].X == 'P');
-                    if (p[2*i+1].X == 'S') {
-                        tmp.PB(p[2*i+1]);
-                    } else {
-                        tmp.PB(p[2*i]);
-                    }
-                }
-            }
-            swap(p, tmp);
+    if (id < M) {
+        for (LL i = N*id/M; i < N*(id+1)/M; i++) {
+            p[L++] = MP(GetFavoriteMove(i), i);
         }
-        return p[0];
-    };
-    auto pr = compete(p);
-    PutChar(0, pr.X);
-    PutLL(0, pr.Y);
-    Send(0);
-    if (id == 0) {
-        p.clear();
+        assert(L == N/M);
+        auto pr = compete();
+        PutChar(M, pr.X);
+        PutLL(M, pr.Y);
+        Send(M);
+    } else if (id == M) {
         REP(i, M) {
             Receive(i);
-            p.EB(GetChar(i), GetLL(i));
+            p[L].first = GetChar(i);
+            p[L].second = GetLL(i);
+            L++;
+            //p[L++] = MP(GetChar(i), GetLL(i));
         }
-        PL(compete(p).Y);
+        assert(L == M);
+        cout << compete().Y << endl;
     }
     return 0;
 }
