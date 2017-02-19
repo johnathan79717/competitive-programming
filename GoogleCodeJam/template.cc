@@ -6,10 +6,10 @@
 #define DRL(x) LL x; RL(x)
 
 int main() {
-    DRI(T);
-    REP1(t, 1, T) {
-        printf("Case #%d: ", t);
+  DRI(T);
+  REP1(t, 1, T) {
+    printf("Case #%d: ", t);
 
-    }
-    return 0;
+  }
+  return 0;
 }
