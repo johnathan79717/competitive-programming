@@ -1,4 +1,3 @@
-#include <array>
 #include <functional>
 #include <list>
 #include <string>
@@ -77,6 +76,7 @@ template<class C> void maxi(C&a4, C b4){a4=max(a4, b4); }
 int popcount(int x) { return __builtin_popcount(x); } 
 int popcount(long long x) { return __builtin_popcountll(x); } 
 
+#include <array>
 #include <unordered_set>
 #include <unordered_map>
 #define EB emplace_back
@@ -84,28 +84,12 @@ int popcount(long long x) { return __builtin_popcountll(x); }
 #define PL(x) printf("%lld\n", x)
 #define DRL(x) LL x; RL(x)
 
-char s[100];
 int main() {
-  gets(s);
-  int T = atoi(s);
+  DRI(T);
   REP1(t, 1, T) {
     printf("Case #%d: ", t);
-    gets(s);
-    int N = atoi(s);
-    auto ans = MP(0, string());
-    REP(i, N) {
-      gets(s);
-      int f[26];
-      MS0(f);
-      int cnt = 0;
-      REPL(j, s) {
-        if (f[s[j]-'A']++ == 0) {
-          cnt++;
-        }
-      }
-      ans = min(ans, MP(-cnt, string(s)));
-    }
-    cout << ans.second << endl;
+    DRI(L, R);
+    PL((1ll + min(L, R)) * min(L, R) / 2);
   }
   return 0;
 }
