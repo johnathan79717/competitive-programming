@@ -217,83 +217,54 @@ int MyNodeId() { return 0; }
 #define LOG(x, ...) fprintf(stderr, x, ##__VA_ARGS__)
 //#define LOG(x...)
 
+int lower_bound(function<LL(LL)> get, LL L, LL x) {
+  int lb = -1, ub = L;
+  while (ub - lb > 1) {
+    int mid = (ub - lb) / 2 + lb;
+    if (get(mid) >= x) {
+      ub = mid;
+    } else {
+      lb = mid;
+    }
+  }
+  return ub;
+}
+
 int main() {
     int M = NumberOfNodes(), id = MyNodeId();
     LL R = 5000000001ll;
     LL l = R * id / M, r = R * (id+1) / M;
     LL L1 = GetToddLength(), L2 = GetStevenLength();
-    int lb = -1, ub = L1;
-    while (ub - lb > 1) {
-      int mid = (ub - lb) / 2 + lb;
-      if (GetToddValue(mid) >= l) {
-        ub = mid;
-      } else {
-        lb = mid;
-      }
-    }
-    int i = ub;
-    lb = -1, ub = L2;
-    while (ub - lb > 1) {
-      int mid = (ub - lb) / 2 + lb;
-      if (GetStevenValue(mid) >= l) {
-        ub = mid;
-      } else {
-        lb = mid;
-      }
-    }
-    int j = ub;
-    lb = -1, ub = L1;
-    while (ub - lb > 1) {
-      int mid = (ub - lb) / 2 + lb;
-      if (GetToddValue(mid) >= r) {
-        ub = mid;
-      } else {
-        lb = mid;
-      }
-    }
-    int ii = ub;
-    lb = -1, ub = L2;
-    while (ub - lb > 1) {
-      int mid = (ub - lb) / 2 + lb;
-      if (GetStevenValue(mid) >= r) {
-        ub = mid;
-      } else {
-        lb = mid;
-      }
-    }
-    int jj = ub;
-    REP1(k, id+1, M-1) {
-      PutInt(k, ii-i+jj-j);
-      Send(k);
-    }
+    int i = lower_bound(GetToddValue, L1, l);
+    int ii = lower_bound(GetToddValue, L1, r);
+    int j = lower_bound(GetStevenValue, L2, l);
+    int jj = lower_bound(GetStevenValue, L2, r);
     int kk = 0;
-    REP(k, id) {
-      Receive(k);
-      kk += GetInt(k);
+    if (id > 0) {
+      Receive(id-1);
+      kk = GetInt(id-1);
+    }
+    if (id + 1 < M) {
+      PutInt(id + 1, ii-i+jj-j);
+      Send(id + 1);
     }
     LL x, y;
     Z ans = 0;
     while (i < ii && j < jj) {
       LL x = GetToddValue(i), y = GetStevenValue(j);
       if (x < y) {
-        ans += (x ^ kk);
+        ans += (x ^ (kk++));
         i++;
-        kk++;
       } else {
-        ans += (y ^ kk);
+        ans += (y ^ (kk++));
         j++;
-        kk++;
       }
     }
     while (i < ii) {
-      ans += (GetToddValue(i) ^ kk);
-      i++;
-      kk++;
+      ans += (GetToddValue(i++) ^ (kk++));
     }
     while (j < jj) {
-      ans += (GetStevenValue(j) ^ kk);
-      j++;
-      kk++;
+      ans += (GetStevenValue(j++) ^ (kk++));
     }
     PutInt(0, ans.i);
     Send(0);
@@ -305,33 +276,5 @@ int main() {
       }
       PZ(ans);
     }
-    //if (id == 0) {
-      //LL L1 = GetToddLength(), L2 = GetStevenLength();
-      //int i = 0, j = 0, k = 0;
-      //Z ans = 0;
-      //while (i < L1 && j < L2) {
-        //LL x = GetToddValue(i), y = GetStevenValue(j);
-        //if (x < y) {
-          //ans += (x ^ k);
-          //i++;
-          //k++;
-        //} else {
-          //ans += (y ^ k);
-          //j++;
-          //k++;
-        //}
-      //}
-      //while (i < L1) {
-        //ans += (GetToddValue(i) ^ k);
-        //i++;
-        //k++;
-      //}
-      //while (j < L2) {
-        //ans += (GetStevenValue(j) ^ k);
-        //j++;
-        //k++;
-      //}
-      //PZ(ans);
-    //}
     return 0;
 }

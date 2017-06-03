@@ -219,64 +219,45 @@ long long pow(long long a, long long b, long long c=Z::MOD){
 
 int main() {
     int M = NumberOfNodes(), id = MyNodeId();
-    //deque<int> dq;
-    //if (id == 0) {
-      //int N = GetNumberLength();
-      //REP(i, N) {
-        //int x = GetDigit(i);
-        //while(dq.size() && dq.back() < x) {
-          //dq.pop_back();
-        //}
-        //dq.PB(x);
-      //}
-      //Z ans = 0;
-      //REP(i, SZ(dq)) {
-        //ans += Z(10).pow(N-1-i) * dq[i];
-      //}
-      //PZ(ans);
-    //}
     LL N = GetNumberLength();
     LL m = 0;
     for (LL i = N * id / M; i < N * (id+1) / M; i++) {
       m = max(m, GetDigit(i));
     }
-    REP(i, id) {
-      PutLL(i, m);
-      Send(i);
+    LL rightMax = 0;
+    if (id + 1 < M) {
+      Receive(id+1);
+      rightMax = GetLL(id+1);
     }
-    m = 0;
-    REP1(i, id+1, M-1) {
-      Receive(i);
-      m = max(m, GetLL(i));
+    if (id > 0) {
+      PutLL(id-1, max(m, rightMax));
+      Send(id-1);
     }
-
-    deque<int> dq;
-    for (LL i = N * id / M; i < N * (id+1) / M; i++) {
-      int x = GetDigit(i);
-      while(dq.size() && dq.back() < x) {
-        dq.pop_back();
-      }
-      dq.PB(x);
-    }
-    while (dq.size() && dq.back() < m) {
-      dq.pop_back();
-    }
+    m = rightMax;
     Z ans = 0;
-    REP(i, SZ(dq)) {
-      ans += Z(10).pow(SZ(dq)-1-i) * dq[i];
+    int cnt = 0;
+    Z p = 1;
+    for (LL i = N * (id+1) / M - 1; i >= N * id / M; i--) {
+    //for (LL i = N * id / M; i < N * (id+1) / M; i++) {
+      int x = GetDigit(i);
+      if (x >= m) {
+        ans += p * x;
+        p *= 10;
+        cnt++;
+        m = x;
+      }
     }
-    REP(i, id) {
-      PutLL(i, SZ(dq));
-      Send(i);
+    int rightCnt = 0;
+    if (id + 1 < M) {
+      Receive(id+1);
+      rightCnt = GetInt(id+1);
     }
-    LL c = 0;
-    REP1(i, id+1, M-1) {
-      Receive(i);
-      c += GetLL(i);
+    if (id > 0) {
+      PutInt(id-1, cnt + rightCnt);
+      Send(id-1);
     }
-    ans *= Z(10).pow(c);
+    ans *= Z(10).pow(rightCnt);
     PutInt(0, ans.i);
-    //PZ(ans);
     Send(0);
     if (id == 0) {
       ans = 0;
@@ -284,7 +265,7 @@ int main() {
         Receive(i);
         ans += GetInt(i);
       }
-      PZ(ans * Z(10).pow(int(N-c-SZ(dq))));
+      PZ(ans * Z(10).pow(int(N-rightCnt-cnt)));
     }
     return 0;
 }
