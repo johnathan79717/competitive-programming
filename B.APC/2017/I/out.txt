@@ -1,0 +1,2005 @@
+0 2 [0, 1, 2, 3]
+0 1 [0, 1, 0, 3]
+2 1 [0, 0, 0, 3]
+Traceback (most recent call last):
+  File "I.py", line 46, in <module>
+    union(a, b)
+  File "I.py", line 11, in union
+    if root(a) != root(b):
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+  File "I.py", line 6, in root
+    r = root(x)
+RuntimeError: maximum recursion depth exceeded

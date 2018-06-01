@@ -1,0 +1,14 @@
+(x + d) % n == 0
+(y + d) % m == 0
+
+ni - x = mj - y
+
+d = -x mod n
+
+d = x (mod n)
+d = y (mod m)
+
+x = g * x1 + k
+y = g * y1 + k
+
+d = x * g * m1 * (1/m mod n) + y * g * m1 * (1 / n mod m)
