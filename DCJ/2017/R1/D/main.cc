@@ -230,22 +230,42 @@ int lower_bound(function<LL(LL)> get, LL L, LL x) {
   return ub;
 }
 
+LL L1, L2;
+
+pair<int, int> binary_search(LL x) {
+  LL lb = 0, ub = 5000000001ll;
+  int i, j;
+  while (ub - lb > 1) {
+    LL m = (lb + ub) / 2;
+    i = lower_bound(GetToddValue, L1, m);
+    j = lower_bound(GetStevenValue, L2, m);
+    if (i + j == x) {
+      break;
+    }
+    if (i + j < x) {
+      lb = m;
+    } else {
+      ub = m;
+    }
+  }
+  return MP(i, j);
+}
+
 int main() {
     int M = NumberOfNodes(), id = MyNodeId();
-    LL R = 5000000001ll;
-    LL l = R * id / M, r = R * (id+1) / M;
-    LL L1 = GetToddLength(), L2 = GetStevenLength();
-    int i = lower_bound(GetToddValue, L1, l);
-    int ii = lower_bound(GetToddValue, L1, r);
-    int j = lower_bound(GetStevenValue, L2, l);
-    int jj = lower_bound(GetStevenValue, L2, r);
+    L1 = GetToddLength(), L2 = GetStevenLength();
+    LL L = L1 + L2;
+    LL l = L * id / M, r = L * (id+1) / M;
+    auto p1 = binary_search(l);
+    auto p2 = binary_search(r);
+    int i = p1.X, j = p1.Y, ii = p2.X, jj = p2.Y;
     int kk = 0;
     if (id > 0) {
       Receive(id-1);
       kk = GetInt(id-1);
     }
     if (id + 1 < M) {
-      PutInt(id + 1, ii-i+jj-j);
+      PutInt(id + 1, kk+ii-i+jj-j);
       Send(id + 1);
     }
     LL x, y;
