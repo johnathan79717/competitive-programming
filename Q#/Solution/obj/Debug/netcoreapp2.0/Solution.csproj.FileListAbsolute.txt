@@ -1,0 +1,11 @@
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/obj/Debug/netcoreapp2.0/Solution.csprojAssemblyReference.cache
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/obj/Debug/netcoreapp2.0/Solution.csproj.CoreCompileInputs.cache
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/bin/Debug/netcoreapp2.0/Solution.deps.json
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/bin/Debug/netcoreapp2.0/Solution.runtimeconfig.json
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/bin/Debug/netcoreapp2.0/Solution.runtimeconfig.dev.json
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/bin/Debug/netcoreapp2.0/Solution.dll
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/bin/Debug/netcoreapp2.0/Solution.pdb
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/obj/Debug/netcoreapp2.0/Solution.AssemblyInfoInputs.cache
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/obj/Debug/netcoreapp2.0/Solution.AssemblyInfo.cs
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/obj/Debug/netcoreapp2.0/Solution.dll
+/Users/jhao/Workspace/competitive-programming/Q#/Solution/obj/Debug/netcoreapp2.0/Solution.pdb

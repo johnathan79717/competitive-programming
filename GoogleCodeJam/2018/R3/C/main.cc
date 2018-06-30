@@ -76,6 +76,13 @@ template<class C> void maxi(C&a4, C b4){a4=max(a4, b4); }
 int popcount(int x) { return __builtin_popcount(x); } 
 int popcount(long long x) { return __builtin_popcountll(x); } 
 
+#include <array>
+#include <unordered_set>
+#include <unordered_map>
+#define EB emplace_back
+#define RL(x) scanf("%lld", &(x))
+#define PL(x) printf("%lld\n", x)
+#define DRL(x) LL x; RL(x)
 double EPS = 1e-10;
 
 double add(double a, double b) {
@@ -83,23 +90,28 @@ double add(double a, double b) {
   return a + b;
 }
 
+LL add(LL a, LL b) {
+    return a + b;
+}
+
+template<class T>
 struct P {
-  double x, y, z;
+  T x, y, z;
   P() {}
-  P(double x, double y, double z) : x(x), y(y), z(z) {}
+  P(LL x, LL y, LL z) : x(x), y(y), z(z) {}
   void read() {
-      scanf("%lf%lf%lf", &x, &y, &z);
+      scanf("%lld%lld%lld", &x, &y, &z);
   }
-  void print() {
-      printf("%f %f %f\n", x, y, z);
-  }
+  //void print() {
+      //printf("%f %f %f\n", x, y, z);
+  //}
   P operator + (const P &p) const {
     return P(add(x, p.x), add(y, p.y), add(z, p.z));
   }
   P operator - (const P &p) const {
     return P(add(x, -p.x), add(y, -p.y), add(z, -p.z));
   }
-  P operator * (double d) const {
+  P operator * (LL d) const {
     return P(x * d, y * d, z * d);
   }
   bool operator == (const P &p) const {
@@ -111,12 +123,12 @@ struct P {
     //if(abs(this->x - p.x) > EPS) return this->x < p.x;
     //return this->y < p.y;
   //}
-  double dot(const P &p) const {
+  LL dot(const P &p) const {
     return add(add(x * p.x, y * p.y), z * p.z);
   }
-  //double cross(const P &p) const {
-    //return add(x * p.y, -y * p.x);
-  //}
+  P cross(const P &p) const {
+      return P(y * p.z - z * p.y, z * p.x - x * p.z, x * p.y - y * p.x);
+  }
   //bool on_seg(const P &p1, const P &p2) const {
     //return (p1 - *this).cross(p2 - *this) == 0 && (p1 - *this).dot(p2 - *this) <= 0;
   //}
@@ -125,68 +137,41 @@ struct P {
   // }
 };
 
-//P intersection(const P &p1, const P &p2, const P &q1, const P &q2) {
-  //return p1 + (p2 - p1) * ((q2 - q1).cross(q1 - p1) / (q2 - q1).cross(p2 - p1));
-//}
-
-//bool intersect(const P &p1, const P &p2, const P &q1, const P &q2) {
-  //P r = intersection(p1, p2, q1, q2);
-  //return r.on_seg(p1, p2) && r.on_seg(q1, q2);
-//}
-
-//bool cmp_x(const P& p, const P& q) {
-    //if (p.x != q.x) return p.x < q.x;
-    //return p.y < q.y;
-//}
-
-//vector<P> convex_hull(vector<P> &ps) {
-    //int n = ps.size();
-    //sort(ALL(ps), cmp_x);
-    //int k = 0;
-    //vector<P> qs(n * 2);
-    //REP(i, n) {
-        //// XXX To include points ON the edges, change "<=" to "<"
-        //while (k > 1 && (qs[k-1] - qs[k-2]).cross(ps[i] - qs[k-1]) <= 0) k--;
-        //qs[k++] = ps[i];
-    //}
-    //for (int i = n-2, t = k; i >= 0; i--) {
-        //// XXX To include points ON the edges, change "<=" to "<"
-        //while (k > t && (qs[k-1] - qs[k-2]).cross(ps[i] - qs[k-1]) <= 0) k--;
-        //qs[k++] = ps[i];
-    //}
-    //qs.resize(k-1);
-    //return qs;
-//}
-
-#include <unordered_set>
-#include <unordered_map>
-#define EB emplace_back
-#define RL(x) scanf("%lld", &(x))
-#define PL(x) printf("%lld\n", x)
-#define DRL(x) LL x; RL(x)
+bool sorted(P<LL> &p1, P<LL> &p2, P<LL> &p3, P<LL> &p4) {
+    P<LL> norm = (p2 - p1).cross(p3 - p1);
+    assert(norm.dot(p2) == norm.dot(p3));
+    auto p0 = p4;
+    p0.z = 0;
+    LL d = norm.dot(p1);
+    assert(norm.dot(p2) == d && norm.dot(p3) == d);
+    LL d4 = norm.dot(p4) - d;
+    LL d0 = norm.dot(p0) - d;
+    return d4 / llabs(d4) != d0 / llabs(d0);
+}
 
 int main() {
-    CASET {
-        P p, q, d, c;
-        p.read();
-        q.read();
-        d.read();
-        c.read();
-        double r;
-        scanf("%lf", &r);
-        double lb = 0, ub = 1e9;
-        REP(i, 300) {
-            double t = (lb + ub) / 2;
-            P v = q + d * t - p;
-            double s = v.dot(c - p) / v.dot(v);
-            P u = v * s + p - c;
-            if (u.dot(u) >= r*r) {
-                ub = t;
-            } else {
-                lb = t;
+    DRI(T);
+    REP1(t, 1, T) {
+        printf("Case #%d: ", t);
+        DRI(N);
+        vector<pair<P<LL>, int>> p(N);
+        REP(i, N) {
+            p[i].X.read();
+            p[i].Y = i;
+        }
+        while (true) {
+            bool change = false;
+            REP1(i, 3, N-1) {
+                if (!sorted(p[i-3].X, p[i-2].X, p[i-1].X, p[i].X)) {
+                    change = true;
+                    swap(p[i-3], p[i]);
+                }
+            }
+            if (!change) break;
+            REP(i, N) {
+                printf("%d%c", p[i].Y + 1, i == N - 1 ? '\n' : ' ');
             }
         }
-        printf("%.10f\n", ub);
     }
-  return 0;
+    return 0;
 }
