@@ -5,10 +5,10 @@
 #define PL(x) printf("%lld\n",x)
 
 int main() {
-  int T, cas = 1;
-  scanf("%d", &T);
-  while(T--) {
-    printf("Case #%d: ", cas++);
+    int T, cas = 1;
+    scanf("%d", &T);
+    while(T--) {
+        printf("Case #%d: ", cas++);
 
-  }
+    }
 }

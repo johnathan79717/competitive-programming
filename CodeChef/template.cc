@@ -5,7 +5,13 @@
 #define PL(x) printf("%lld\n", x)
 #define DRL(x) LL x; RL(x)
 
-int main() {
+void solve() {
 
+}
+
+int main() {
+    CASET {
+        solve();
+    }
     return 0;
 }

@@ -19,8 +19,16 @@ using Microsoft.Quantum.MetaData.Attributes;
 [assembly: OperationDeclaration("Solution", "OracleKthElement (x : Qubit[], y : Qubit, k : Int) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 6355L, 234L, 70L)]
 [assembly: OperationDeclaration("Solution", "OracleParity (x : Qubit[], y : Qubit) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 6478L, 240L, 57L)]
 [assembly: OperationDeclaration("Solution", "DeutschJozsa (N : Int, Uf : ((Qubit[], Qubit) => ())) : Bool", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 6685L, 249L, 5L)]
-[assembly: OperationDeclaration("Solution", "DeutschJozsaTest () : Bool", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 7432L, 275L, 42L)]
-[assembly: OperationDeclaration("Solution", "Solve (N : Int, Uf : ((Qubit[], Qubit) => ())) : Bool", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 7583L, 281L, 69L)]
+[assembly: OperationDeclaration("Solution", "Solve (N : Int, Uf : ((Qubit[], Qubit) => ())) : Int[]", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 7463L, 275L, 5L)]
+[assembly: OperationDeclaration("Solution", "DeutschJozsaTest () : Bool", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 8193L, 301L, 42L)]
+[assembly: OperationDeclaration("Solution", "GenerateSuperpositionOfAllStates (qs : Qubit[]) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 8350L, 307L, 68L)]
+[assembly: OperationDeclaration("Solution", "DetermineZeroAndW (qs : Qubit[]) : Int", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 8526L, 315L, 54L)]
+[assembly: OperationDeclaration("Solution", "GenerateSuperpositionOfZeroAndABasis (qs : Qubit[], bits : Bool[]) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 8823L, 326L, 87L)]
+[assembly: OperationDeclaration("Solution", "DistinguishGHZAndW (qs : Qubit[]) : Int", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 9345L, 344L, 5L)]
+[assembly: OperationDeclaration("Solution", "GenerateSuperpositionOfTwoBases (qs : Qubit[], bits0 : Bool[], bits1 : Bool[]) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 9675L, 357L, 5L)]
+[assembly: OperationDeclaration("Solution", "OracleXor (x : Qubit[], y : Qubit, b : Int[]) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 10416L, 382L, 5L)]
+[assembly: OperationDeclaration("Solution", "OracleDot (x : Qubit[], y : Qubit, b : Int[]) : ()", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 10801L, 398L, 5L)]
+[assembly: OperationDeclaration("Solution", "DistinguishFourStates1 (qs : Qubit[]) : Int", new string[] { }, "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs", 11090L, 411L, 5L)]
 #line hidden
 namespace Solution
 {
@@ -1240,48 +1248,7 @@ namespace Solution
         }
     }
 
-    public class DeutschJozsaTest : Operation<QVoid, Boolean>, ICallable
-    {
-        public DeutschJozsaTest(IOperationFactory m) : base(m)
-        {
-        }
-
-        String ICallable.Name => "DeutschJozsaTest";
-        String ICallable.FullName => "Solution.DeutschJozsaTest";
-        protected ICallable<(QArray<Qubit>,Qubit), QVoid> OracleParity
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<(Int64,ICallable), Boolean> Solve
-        {
-            get;
-            set;
-        }
-
-        public override Func<QVoid, Boolean> Body => (__in) =>
-        {
-#line 277 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
-            return Solve.Apply((2L, ((ICallable)OracleParity)));
-        }
-
-        ;
-        public override void Init()
-        {
-            this.OracleParity = this.Factory.Get<ICallable<(QArray<Qubit>,Qubit), QVoid>>(typeof(Solution.OracleParity));
-            this.Solve = this.Factory.Get<ICallable<(Int64,ICallable), Boolean>>(typeof(Solution.Solve));
-        }
-
-        public override IApplyData __dataIn(QVoid data) => data;
-        public override IApplyData __dataOut(Boolean data) => new QTuple<Boolean>(data);
-        public static System.Threading.Tasks.Task<Boolean> Run(IOperationFactory __m__)
-        {
-            return __m__.Run<DeutschJozsaTest, QVoid, Boolean>(QVoid.Instance);
-        }
-    }
-
-    public class Solve : Operation<(Int64,ICallable), Boolean>, ICallable
+    public class Solve : Operation<(Int64,ICallable), QArray<Int64>>, ICallable
     {
         public Solve(IOperationFactory m) : base(m)
         {
@@ -1298,30 +1265,630 @@ namespace Solution
 
         String ICallable.Name => "Solve";
         String ICallable.FullName => "Solution.Solve";
+        protected Allocate Allocate
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<Qubit, Result> M
+        {
+            get;
+            set;
+        }
+
+        protected Release Release
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<(Result,Qubit), QVoid> Set
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveX
+        {
+            get;
+            set;
+        }
+
+        public override Func<(Int64,ICallable), QArray<Int64>> Body => (__in) =>
+        {
+            var (N,Uf) = __in;
+#line 278 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            var b = new QArray<Int64>(N);
+#line 279 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            var x = Allocate.Apply(N);
+#line 280 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (N - 1L)))
+            {
+#line 281 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                MicrosoftQuantumPrimitiveH.Apply(x[i]);
+            }
+
+#line 283 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            var y = Allocate.Apply(1L);
+#line 284 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            MicrosoftQuantumPrimitiveX.Apply(y[0L]);
+#line 285 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            MicrosoftQuantumPrimitiveH.Apply(y[0L]);
+#line 286 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            Uf.Apply((x, y[0L]));
+#line 287 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (N - 1L)))
+            {
+#line 288 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                MicrosoftQuantumPrimitiveH.Apply(x[i]);
+#line 289 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((M.Apply(x[i]) == Result.One))
+                {
+#line 290 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    b[i] = 1L;
+#line 291 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveX.Apply(x[i]);
+                }
+            }
+
+#line 294 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            Set.Apply((Result.Zero, y[0L]));
+#line hidden
+            Release.Apply(y);
+#line hidden
+            Release.Apply(x);
+#line 297 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            return b;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Primitive.Allocate));
+            this.MicrosoftQuantumPrimitiveH = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.H));
+            this.M = this.Factory.Get<ICallable<Qubit, Result>>(typeof(Microsoft.Quantum.Primitive.M));
+            this.Release = this.Factory.Get<Release>(typeof(Microsoft.Quantum.Primitive.Release));
+            this.Set = this.Factory.Get<ICallable<(Result,Qubit), QVoid>>(typeof(Solution.Set));
+            this.MicrosoftQuantumPrimitiveX = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.X));
+        }
+
+        public override IApplyData __dataIn((Int64,ICallable) data) => new In(data);
+        public override IApplyData __dataOut(QArray<Int64> data) => data;
+        public static System.Threading.Tasks.Task<QArray<Int64>> Run(IOperationFactory __m__, Int64 N, ICallable Uf)
+        {
+            return __m__.Run<Solve, (Int64,ICallable), QArray<Int64>>((N, Uf));
+        }
+    }
+
+    public class DeutschJozsaTest : Operation<QVoid, Boolean>, ICallable
+    {
+        public DeutschJozsaTest(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "DeutschJozsaTest";
+        String ICallable.FullName => "Solution.DeutschJozsaTest";
         protected ICallable<(Int64,ICallable), Boolean> DeutschJozsa
         {
             get;
             set;
         }
 
-        public override Func<(Int64,ICallable), Boolean> Body => (__in) =>
+        protected ICallable<(QArray<Qubit>,Qubit), QVoid> OracleParity
         {
-            var (N,Uf) = __in;
-#line 284 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
-            return DeutschJozsa.Apply((N, ((ICallable)Uf)));
+            get;
+            set;
+        }
+
+        public override Func<QVoid, Boolean> Body => (__in) =>
+        {
+#line 303 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            return DeutschJozsa.Apply((2L, ((ICallable)OracleParity)));
         }
 
         ;
         public override void Init()
         {
             this.DeutschJozsa = this.Factory.Get<ICallable<(Int64,ICallable), Boolean>>(typeof(Solution.DeutschJozsa));
+            this.OracleParity = this.Factory.Get<ICallable<(QArray<Qubit>,Qubit), QVoid>>(typeof(Solution.OracleParity));
         }
 
-        public override IApplyData __dataIn((Int64,ICallable) data) => new In(data);
+        public override IApplyData __dataIn(QVoid data) => data;
         public override IApplyData __dataOut(Boolean data) => new QTuple<Boolean>(data);
-        public static System.Threading.Tasks.Task<Boolean> Run(IOperationFactory __m__, Int64 N, ICallable Uf)
+        public static System.Threading.Tasks.Task<Boolean> Run(IOperationFactory __m__)
         {
-            return __m__.Run<Solve, (Int64,ICallable), Boolean>((N, Uf));
+            return __m__.Run<DeutschJozsaTest, QVoid, Boolean>(QVoid.Instance);
+        }
+    }
+
+    public class GenerateSuperpositionOfAllStates : Operation<QArray<Qubit>, QVoid>, ICallable
+    {
+        public GenerateSuperpositionOfAllStates(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "GenerateSuperpositionOfAllStates";
+        String ICallable.FullName => "Solution.GenerateSuperpositionOfAllStates";
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get;
+            set;
+        }
+
+        public override Func<QArray<Qubit>, QVoid> Body => (__in) =>
+        {
+            var qs = __in;
+#line 309 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (qs.Count - 1L)))
+            {
+#line 310 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                MicrosoftQuantumPrimitiveH.Apply(qs[i]);
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumPrimitiveH = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.H));
+        }
+
+        public override IApplyData __dataIn(QArray<Qubit> data) => data;
+        public override IApplyData __dataOut(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> qs)
+        {
+            return __m__.Run<GenerateSuperpositionOfAllStates, QArray<Qubit>, QVoid>(qs);
+        }
+    }
+
+    public class DetermineZeroAndW : Operation<QArray<Qubit>, Int64>, ICallable
+    {
+        public DetermineZeroAndW(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "DetermineZeroAndW";
+        String ICallable.FullName => "Solution.DetermineZeroAndW";
+        protected ICallable<Qubit, Result> M
+        {
+            get;
+            set;
+        }
+
+        public override Func<QArray<Qubit>, Int64> Body => (__in) =>
+        {
+            var qs = __in;
+#line 317 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (qs.Count - 1L)))
+            {
+#line 318 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((M.Apply(qs[i]) == Result.One))
+                {
+#line 319 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    return 1L;
+                }
+            }
+
+#line 322 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            return 0L;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.M = this.Factory.Get<ICallable<Qubit, Result>>(typeof(Microsoft.Quantum.Primitive.M));
+        }
+
+        public override IApplyData __dataIn(QArray<Qubit> data) => data;
+        public override IApplyData __dataOut(Int64 data) => new QTuple<Int64>(data);
+        public static System.Threading.Tasks.Task<Int64> Run(IOperationFactory __m__, QArray<Qubit> qs)
+        {
+            return __m__.Run<DetermineZeroAndW, QArray<Qubit>, Int64>(qs);
+        }
+    }
+
+    public class GenerateSuperpositionOfZeroAndABasis : Operation<(QArray<Qubit>,QArray<Boolean>), QVoid>, ICallable
+    {
+        public GenerateSuperpositionOfZeroAndABasis(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(QArray<Qubit>,QArray<Boolean>)>, IApplyData
+        {
+            public In((QArray<Qubit>,QArray<Boolean>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits => ((IApplyData)Data.Item1)?.Qubits;
+        }
+
+        String ICallable.Name => "GenerateSuperpositionOfZeroAndABasis";
+        String ICallable.FullName => "Solution.GenerateSuperpositionOfZeroAndABasis";
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get;
+            set;
+        }
+
+        public override Func<(QArray<Qubit>,QArray<Boolean>), QVoid> Body => (__in) =>
+        {
+            var (qs,bits) = __in;
+#line 328 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            var done = false;
+#line 329 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (qs.Count - 1L)))
+            {
+#line 330 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((!(done) && bits[i]))
+                {
+#line 331 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    done = true;
+#line 332 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveH.Apply(qs[i]);
+#line 333 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    foreach (var j in new Range(0L, (qs.Count - 1L)))
+                    {
+#line 334 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                        if (((j != i) && bits[j]))
+                        {
+#line 335 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                            MicrosoftQuantumPrimitiveCNOT.Apply((qs[i], qs[j]));
+                        }
+                    }
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
+            this.MicrosoftQuantumPrimitiveH = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.H));
+        }
+
+        public override IApplyData __dataIn((QArray<Qubit>,QArray<Boolean>) data) => new In(data);
+        public override IApplyData __dataOut(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> qs, QArray<Boolean> bits)
+        {
+            return __m__.Run<GenerateSuperpositionOfZeroAndABasis, (QArray<Qubit>,QArray<Boolean>), QVoid>((qs, bits));
+        }
+    }
+
+    public class DistinguishGHZAndW : Operation<QArray<Qubit>, Int64>, ICallable
+    {
+        public DistinguishGHZAndW(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "DistinguishGHZAndW";
+        String ICallable.FullName => "Solution.DistinguishGHZAndW";
+        protected ICallable<Qubit, Result> M
+        {
+            get;
+            set;
+        }
+
+        public override Func<QArray<Qubit>, Int64> Body => (__in) =>
+        {
+            var qs = __in;
+#line 347 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (qs.Count - 2L)))
+            {
+#line 348 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((M.Apply(qs[i]) != M.Apply(qs[(i + 1L)])))
+                {
+#line 349 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    return 1L;
+                }
+            }
+
+#line 352 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            return 0L;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.M = this.Factory.Get<ICallable<Qubit, Result>>(typeof(Microsoft.Quantum.Primitive.M));
+        }
+
+        public override IApplyData __dataIn(QArray<Qubit> data) => data;
+        public override IApplyData __dataOut(Int64 data) => new QTuple<Int64>(data);
+        public static System.Threading.Tasks.Task<Int64> Run(IOperationFactory __m__, QArray<Qubit> qs)
+        {
+            return __m__.Run<DistinguishGHZAndW, QArray<Qubit>, Int64>(qs);
+        }
+    }
+
+    public class GenerateSuperpositionOfTwoBases : Operation<(QArray<Qubit>,QArray<Boolean>,QArray<Boolean>), QVoid>, ICallable
+    {
+        public GenerateSuperpositionOfTwoBases(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(QArray<Qubit>,QArray<Boolean>,QArray<Boolean>)>, IApplyData
+        {
+            public In((QArray<Qubit>,QArray<Boolean>,QArray<Boolean>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits => ((IApplyData)Data.Item1)?.Qubits;
+        }
+
+        String ICallable.Name => "GenerateSuperpositionOfTwoBases";
+        String ICallable.FullName => "Solution.GenerateSuperpositionOfTwoBases";
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveX
+        {
+            get;
+            set;
+        }
+
+        public override Func<(QArray<Qubit>,QArray<Boolean>,QArray<Boolean>), QVoid> Body => (__in) =>
+        {
+            var (qs,bits0,bits1) = __in;
+            // your code here
+#line 361 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            var done = false;
+#line 362 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (qs.Count - 1L)))
+            {
+#line 363 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((!(done) && (bits0[i] != bits1[i])))
+                {
+#line 364 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    done = true;
+#line 365 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveH.Apply(qs[i]);
+#line 366 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    foreach (var j in new Range(0L, (qs.Count - 1L)))
+                    {
+#line 367 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                        if (((j != i) && (bits0[j] != bits1[j])))
+                        {
+#line 368 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                            MicrosoftQuantumPrimitiveCNOT.Apply((qs[i], qs[j]));
+                        }
+                    }
+                }
+            }
+
+#line 373 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (qs.Count - 1L)))
+            {
+#line 374 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if (bits0[i])
+                {
+#line 375 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveX.Apply(qs[i]);
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
+            this.MicrosoftQuantumPrimitiveH = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.H));
+            this.MicrosoftQuantumPrimitiveX = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.X));
+        }
+
+        public override IApplyData __dataIn((QArray<Qubit>,QArray<Boolean>,QArray<Boolean>) data) => new In(data);
+        public override IApplyData __dataOut(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> qs, QArray<Boolean> bits0, QArray<Boolean> bits1)
+        {
+            return __m__.Run<GenerateSuperpositionOfTwoBases, (QArray<Qubit>,QArray<Boolean>,QArray<Boolean>), QVoid>((qs, bits0, bits1));
+        }
+    }
+
+    public class OracleXor : Operation<(QArray<Qubit>,Qubit,QArray<Int64>), QVoid>, ICallable
+    {
+        public OracleXor(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(QArray<Qubit>,Qubit,QArray<Int64>)>, IApplyData
+        {
+            public In((QArray<Qubit>,Qubit,QArray<Int64>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits => Qubit.Concat(((IApplyData)Data.Item1)?.Qubits, ((IApplyData)Data.Item2)?.Qubits);
+        }
+
+        String ICallable.Name => "OracleXor";
+        String ICallable.FullName => "Solution.OracleXor";
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        {
+            get;
+            set;
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveX
+        {
+            get;
+            set;
+        }
+
+        public override Func<(QArray<Qubit>,Qubit,QArray<Int64>), QVoid> Body => (__in) =>
+        {
+            var (x,y,b) = __in;
+            // your code here
+#line 386 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (x.Count - 1L)))
+            {
+#line 387 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((b[i] == 1L))
+                {
+#line 388 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveCNOT.Apply((x[i], y));
+                }
+                else
+                {
+#line 390 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveCNOT.Apply((x[i], y));
+#line 391 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveX.Apply(y);
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
+            this.MicrosoftQuantumPrimitiveX = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.X));
+        }
+
+        public override IApplyData __dataIn((QArray<Qubit>,Qubit,QArray<Int64>) data) => new In(data);
+        public override IApplyData __dataOut(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> x, Qubit y, QArray<Int64> b)
+        {
+            return __m__.Run<OracleXor, (QArray<Qubit>,Qubit,QArray<Int64>), QVoid>((x, y, b));
+        }
+    }
+
+    public class OracleDot : Operation<(QArray<Qubit>,Qubit,QArray<Int64>), QVoid>, ICallable
+    {
+        public OracleDot(IOperationFactory m) : base(m)
+        {
+        }
+
+        public class In : QTuple<(QArray<Qubit>,Qubit,QArray<Int64>)>, IApplyData
+        {
+            public In((QArray<Qubit>,Qubit,QArray<Int64>) data) : base(data)
+            {
+            }
+
+            System.Collections.Generic.IEnumerable<Qubit> IApplyData.Qubits => Qubit.Concat(((IApplyData)Data.Item1)?.Qubits, ((IApplyData)Data.Item2)?.Qubits);
+        }
+
+        String ICallable.Name => "OracleDot";
+        String ICallable.FullName => "Solution.OracleDot";
+        protected IUnitary<(Qubit,Qubit)> MicrosoftQuantumPrimitiveCNOT
+        {
+            get;
+            set;
+        }
+
+        public override Func<(QArray<Qubit>,Qubit,QArray<Int64>), QVoid> Body => (__in) =>
+        {
+            var (x,y,b) = __in;
+            // your code here
+#line 402 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            foreach (var i in new Range(0L, (x.Count - 1L)))
+            {
+#line 403 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                if ((b[i] == 1L))
+                {
+#line 404 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+                    MicrosoftQuantumPrimitiveCNOT.Apply((x[i], y));
+                }
+            }
+
+#line hidden
+            return QVoid.Instance;
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumPrimitiveCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Primitive.CNOT));
+        }
+
+        public override IApplyData __dataIn((QArray<Qubit>,Qubit,QArray<Int64>) data) => new In(data);
+        public override IApplyData __dataOut(QVoid data) => data;
+        public static System.Threading.Tasks.Task<QVoid> Run(IOperationFactory __m__, QArray<Qubit> x, Qubit y, QArray<Int64> b)
+        {
+            return __m__.Run<OracleDot, (QArray<Qubit>,Qubit,QArray<Int64>), QVoid>((x, y, b));
+        }
+    }
+
+    public class DistinguishFourStates1 : Operation<QArray<Qubit>, Int64>, ICallable
+    {
+        public DistinguishFourStates1(IOperationFactory m) : base(m)
+        {
+        }
+
+        String ICallable.Name => "DistinguishFourStates1";
+        String ICallable.FullName => "Solution.DistinguishFourStates1";
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<Qubit, Result> M
+        {
+            get;
+            set;
+        }
+
+        protected ICallable<QArray<Result>, Int64> MicrosoftQuantumCanonResultAsInt
+        {
+            get;
+            set;
+        }
+
+        public override Func<QArray<Qubit>, Int64> Body => (__in) =>
+        {
+            var qs = __in;
+#line 414 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            MicrosoftQuantumPrimitiveH.Apply(qs[0L]);
+#line 415 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            MicrosoftQuantumPrimitiveH.Apply(qs[1L]);
+#line 416 "/Users/jhao/Workspace/competitive-programming/Q#/Solution/Operation.qs"
+            return MicrosoftQuantumCanonResultAsInt.Apply(new QArray<Result>(M.Apply(qs[1L]), M.Apply(qs[0L])));
+        }
+
+        ;
+        public override void Init()
+        {
+            this.MicrosoftQuantumPrimitiveH = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Primitive.H));
+            this.M = this.Factory.Get<ICallable<Qubit, Result>>(typeof(Microsoft.Quantum.Primitive.M));
+            this.MicrosoftQuantumCanonResultAsInt = this.Factory.Get<ICallable<QArray<Result>, Int64>>(typeof(Microsoft.Quantum.Canon.ResultAsInt));
+        }
+
+        public override IApplyData __dataIn(QArray<Qubit> data) => data;
+        public override IApplyData __dataOut(Int64 data) => new QTuple<Int64>(data);
+        public static System.Threading.Tasks.Task<Int64> Run(IOperationFactory __m__, QArray<Qubit> qs)
+        {
+            return __m__.Run<DistinguishFourStates1, QArray<Qubit>, Int64>(qs);
         }
     }
 }

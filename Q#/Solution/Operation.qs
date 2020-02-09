@@ -271,17 +271,156 @@
             return ans;
         }
     }
+    operation Solve (N : Int, Uf : ((Qubit[], Qubit) => ())) : Int[]
+    {
+        body
+        {
+            mutable b = new Int[N];
+            using (x = Qubit[N]) {
+                for (i in 0..N-1) {
+                    H(x[i]);
+                }
+                using (y = Qubit[1]) {
+                    X(y[0]);
+                    H(y[0]);
+                    Uf(x, y[0]);
+                    for (i in 0..N-1) {
+                        H(x[i]);
+                        if (M(x[i]) == One) {
+                            set b[i] = 1;
+                            X(x[i]);
+                        }
+                    }
+                    Set(Zero, y[0]);
+                }
+            }
+            return b;
+        }
+    }
 
     operation DeutschJozsaTest () : Bool {
         body {
-            return Solve(2, OracleParity);
+            return DeutschJozsa(2, OracleParity);
         }
     }
 
-    operation Solve (N : Int, Uf : ((Qubit[], Qubit) => ())) : Bool {
-        body
-        {
-            return DeutschJozsa(N, Uf);
+    operation GenerateSuperpositionOfAllStates (qs : Qubit[]) : () {
+        body {
+            for (i in 0..Length(qs)-1) {
+                H(qs[i]);
+            }
         }
     }
+
+    operation DetermineZeroAndW (qs : Qubit[]) : Int {
+        body {
+            for (i in 0..Length(qs) - 1) {
+                if (M(qs[i]) == One) {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+    }
+
+    operation GenerateSuperpositionOfZeroAndABasis (qs : Qubit[], bits : Bool[]) : () {
+        body {
+            mutable done = false;
+            for (i in 0..Length(qs) - 1) {
+                if (!done && bits[i]) {
+                    set done = true;
+                    H(qs[i]);
+                    for (j in 0..Length(qs) - 1) {
+                        if (j != i && bits[j]) {
+                            CNOT(qs[i], qs[j]);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    operation DistinguishGHZAndW (qs : Qubit[]) : Int
+    {
+        body
+        {
+            for (i in 0..Length(qs) - 2) {
+                if (M(qs[i]) != M(qs[i+1])) {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+    }
+
+    operation GenerateSuperpositionOfTwoBases (qs : Qubit[], bits0 : Bool[], bits1 : Bool[]) : ()
+    {
+        body
+        {
+            // your code here
+            mutable done = false;
+            for (i in 0..Length(qs) - 1) {
+                if (!done && bits0[i] != bits1[i]) {
+                    set done = true;
+                    H(qs[i]);
+                    for (j in 0..Length(qs) - 1) {
+                        if (j != i && bits0[j] != bits1[j]) {
+                            CNOT(qs[i], qs[j]);
+                        }
+                    }
+                }
+            }
+            for (i in 0..Length(qs) - 1) {
+                if (bits0[i]) {
+                    X(qs[i]);
+                }
+            }
+        }
+    }
+
+    operation OracleXor (x : Qubit[], y : Qubit, b : Int[]) : ()
+    {
+        body
+        {
+            // your code here
+            for (i in 0..Length(x) - 1) {
+                if (b[i] == 1) {
+                    CNOT(x[i], y);
+                } else {
+                    CNOT(x[i], y);
+                    X(y);
+                }
+            }
+        }
+    }
+
+    operation OracleDot (x : Qubit[], y : Qubit, b : Int[]) : ()
+    {
+        body
+        {
+            // your code here
+            for (i in 0..Length(x) - 1) {
+                if (b[i] == 1) {
+                    CNOT(x[i], y);
+                }
+            }
+        }
+    }
+
+    operation DistinguishFourStates1 (qs : Qubit[]) : Int
+    {
+        body
+        {
+            H(qs[0]);
+            H(qs[1]);
+            return ResultAsInt([M(qs[1]); M(qs[0])]);
+        }
+    }
+
+    // operation Solve (N : Int, Uf : ((Qubit[], Qubit) => ())) : Bool {
+    //     body
+    //     {
+    //         return DeutschJozsa(N, Uf);
+    //     }
+    // }
 }
