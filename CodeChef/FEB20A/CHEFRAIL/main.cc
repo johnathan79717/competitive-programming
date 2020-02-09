@@ -85,47 +85,47 @@ int popcount(long long x) { return __builtin_popcountll(x); }
 
 const int MAX = 100000;
 VI prime_factors[MAX+1];
+VI factors[MAX+1];
+
+int half(int y) {
+    int ans = 1;
+    for (int p : prime_factors[y]) {
+        int k = 0;
+        while (y % p == 0) {
+            y /= p;
+            k++;
+        }
+        REP(i, (k+1)/2) {
+            ans *= p;
+        }
+    }
+    return ans;
+}
 
 LL f(unordered_set<int> const &xs, unordered_set<int> const &ys) {
     LL ans = 0;
+    unordered_map<int, VI> half_ys;
+    for (int y : ys) {
+        if (y > 0) half_ys[half(y)].PB(y);
+    }
     for (int x: xs) {
         if (x < 0) {
             x = -x;
         }
         // x > 0
-        priority_queue<int, VI, greater<int>> factors;
-        factors.push(1);
-        if (ys.count(x) && ys.count(-x)) {
-            ans++;
-        }
-        LL x2 = 1ll * x * x;
-        while (factors.size()) {
-            LL f = factors.top();
-            if (f >= x) {
-                break;
-            }
-            do {
-                factors.pop();
-            } while (factors.size() && factors.top() == f);
-            if (x2 % f) {
-                continue;
-            }
-            if (x2 / f <= MAX) {
-                int f2 = x2 / f;
-                // f < x < f2 <= MAX
-                if (ys.count(f) && ys.count(-f2)) {
-                    ans++;
-                }
-                if (ys.count(f2) && ys.count(-f)) {
-                    ans++;
-                }
-            }
-            for (int p : prime_factors[x]) {
-                if (1ll * f * p <= MAX) {
-                    factors.push(f * p);
+        LL neg_x2 = -1ll * x * x;
+        for (int f : factors[x]) {
+            if (half_ys.count(f)) {
+                for (int y : half_ys[f]) {
+                    if (neg_x2 / y >= -MAX) {
+                        if (ys.count(neg_x2 / y)) {
+                            ans++;
+                        }
+                    }
                 }
             }
         }
+        //cerr << x << ' ' << ans << endl;
     }
     return ans;
 }
@@ -152,11 +152,17 @@ void solve() {
 }
 
 int main() {
+    REP1(i, 1, MAX) {
+        factors[i].PB(1);
+    }
     for (int p = 2; p <= MAX; p++) {
         if (prime_factors[p].empty()) {
             for (int k = p; k <= MAX; k += p) {
                 prime_factors[k].push_back(p);
             }
+        }
+        for (int k = p; k <= MAX; k += p) {
+            factors[k].PB(p);
         }
     }
     CASET {
