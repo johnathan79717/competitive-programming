@@ -93,24 +93,26 @@ LL f(unordered_set<int> const &xs, unordered_set<int> const &ys) {
             x = -x;
         }
         // x > 0
-        priority_queue<LL> factors;
-        //unordered_set<LL> pushed;
-        LL x2 = 1ll * x * x;
-        factors.push(x2);
+        priority_queue<int, VI, greater<int>> factors;
+        factors.push(1);
         if (ys.count(x) && ys.count(-x)) {
             ans++;
         }
+        LL x2 = 1ll * x * x;
         while (factors.size()) {
             LL f = factors.top();
+            if (f >= x) {
+                break;
+            }
             do {
                 factors.pop();
             } while (factors.size() && factors.top() == f);
-            if (f <= x) {
-                break;
+            if (x2 % f) {
+                continue;
             }
-            LL f2 = x2 / f;
-            // f2 < x < f
-            if (f <= MAX) {
+            if (x2 / f <= MAX) {
+                int f2 = x2 / f;
+                // f < x < f2 <= MAX
                 if (ys.count(f) && ys.count(-f2)) {
                     ans++;
                 }
@@ -118,16 +120,9 @@ LL f(unordered_set<int> const &xs, unordered_set<int> const &ys) {
                     ans++;
                 }
             }
-            if (f <= MAX) {
-                for (int p : prime_factors[f]) {
-                    factors.push(f / p);
-                }
-                continue;
-            }
             for (int p : prime_factors[x]) {
-                if (f % p == 0 /*&& !pushed.count(f / p)*/) {
-                    factors.push(f / p);
-                    //pushed.insert(f / p);
+                if (1ll * f * p <= MAX) {
+                    factors.push(f * p);
                 }
             }
         }
