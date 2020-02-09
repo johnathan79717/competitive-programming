@@ -1,0 +1,49 @@
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+    int T, N;
+    string s;
+    getline(cin, s);
+    istringstream iss(s);
+    
+    iss >> T;
+    for (int ti = 1; ti <= T; ++ti) {
+        getline(cin, s);
+        istringstream iss2(s);
+        iss2 >> N;
+        string m[3];
+        for (int ni = 0; ni < 3; ++ni) {
+            getline(cin, m[ni]);
+        }
+
+        int rtn = 0;
+        if ((N % 2) == 1 || m[0][0] == '#' || m[1][0] == '#' || m[2][N - 1] == '#' || m[1][N - 1] == '#') {
+            rtn = 0;
+        }
+        else {
+            rtn = 1;            
+            for (int j = 1; j < N - 2; j += 2) {
+                int path = 0;
+                if (m[1][j] == '#' || m[1][j+1] == '#') {
+                    break;
+                }
+                else {
+                    if (m[0][j] == '.' && m[0][j + 1] == '.') ++path;
+                    if (m[2][j] == '.' && m[2][j + 1] == '.') ++path;
+                }
+                rtn *= path;
+                rtn = rtn % 1000000007;
+            }
+        }
+
+        cout << "Case #" << ti << ": " << rtn << endl;
+    }
+    
+    return 0;
+}
