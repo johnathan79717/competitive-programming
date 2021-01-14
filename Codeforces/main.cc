@@ -1,4 +1,5 @@
 // Create your own template by modifying this file!
+#include <array>
 #include <string>
 #include <vector>
 #include <climits>
@@ -16,6 +17,8 @@
 #include <deque>
 #include <stack>
 #include <functional>
+#include <bitset>
+#include <numeric>
 #define SZ(X) ((int)(X).size())
 #define ALL(X) (X).begin(), (X).end()
 #define REP(I, N) for (int I = 0; I < (N); ++I)
@@ -39,6 +42,7 @@ typedef unsigned long long ULL;
 typedef long double LD;
 typedef pair<int,int> PII;
 typedef vector<int> VI;
+typedef vector<int> VVI;
 typedef vector<LL> VL;
 typedef vector<PII> VPII;
 typedef pair<LL,LL> PLL;
@@ -61,22 +65,22 @@ template<class T,class U> void _W(const pair<T,U> &x) {_W(x.F); putchar(' '); _W
 template<class T> void _W(const vector<T> &x) { for (auto i = x.begin(); i != x.end(); _W(*i++)) if (i != x.cbegin()) putchar(' ');  }
 void W() {}
 template<class T, class... U> void W(const T &head, const U &... tail) { _W(head); putchar(sizeof...(tail) ? ' ' : '\n'); W(tail...);  }
-#ifdef HOME
- #define DEBUG(...) {printf("[DEBUG] ");W(__VA_ARGS__);}
+#ifdef DEBUG
+ #define debug(...) {printf("[DEBUG] ");W(__VA_ARGS__);}
 #else
- #define DEBUG(...)
+ #define debug(...)
 #endif
 int MOD = 1e9+7;
 void ADD(LL& x,LL v){x=(x+v)%MOD;if(x<0)x+=MOD;}
 /*}}}*/
 const int SIZE = 1<<20;
+template<class T> void MIN(T& a, const T& b) { a = min(a, b); }
+template<class T> void MAX(T& a, const T& b) { a = max(a, b); }
 
 void solve() {
-
 }
 
 int main() {
-#define MULTITEST 1
 #if MULTITEST    
     CASET{
         solve();
