@@ -18,7 +18,6 @@
 #include <functional>
 #include <bitset>
 #include <numeric>
-#define int LL
 #define SZ(X) ((int)(X).size())
 #define ALL(X) (X).begin(), (X).end()
 #define REP(I, N) for (int I = 0; I < (N); ++I)
@@ -76,11 +75,18 @@ template<class T> void MAX(T& a, const T& b) { a = max(a, b); }
 
 typedef bitset<1001> B;
 
+B pf[1001][1001], sf[1001][1001];
+
 # define MULTITEST 1
 void solve() {
     int N, X, Y;
     R(N, X, Y);
-    vector<vector<B>> pf(N+1, vector<B>(N+1)), sf = pf;
+    REP(i, N+1) {
+        REP(j, N+1) {
+            pf[i][j].reset();
+            sf[i][j].reset();
+        }
+    }
     VI A(N);
     pf[0][0].set(Y);
     REP(i, N) {

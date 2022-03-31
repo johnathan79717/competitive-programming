@@ -18,7 +18,6 @@
 #include <functional>
 #include <bitset>
 #include <numeric>
-#define int LL
 #define SZ(X) ((int)(X).size())
 #define ALL(X) (X).begin(), (X).end()
 #define REP(I, N) for (int I = 0; I < (N); ++I)
@@ -47,6 +46,7 @@ typedef vector<PII> VPII;
 typedef pair<LL,LL> PLL;
 typedef vector<PLL> VPLL;
 template<class T> void _R(T &x) { cin >> x;  }
+void _R(int &x) { scanf("%d", &x);  }
 void _R(int64_t &x) { scanf("%lld", &x);  }
 void _R(double &x) { scanf("%lf", &x);  }
 void _R(char &x) { scanf(" %c", &x);  }
@@ -54,6 +54,7 @@ void _R(char *x) { scanf("%s", x);  }
 void R() {}
 template<class T, class... U> void R(T &head, U &... tail) { _R(head); R(tail...);  }
 template<class T> void _W(const T &x) { cout << x;  }
+void _W(const int &x) { printf("%d", x);  }
 void _W(const int64_t &x) { printf("%lld", x);  }
 void _W(const double &x) { printf("%.16f", x);  }
 void _W(const char &x) { putchar(x);  }
